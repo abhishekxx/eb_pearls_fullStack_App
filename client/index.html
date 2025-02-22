@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logomatum - Invoice Factoring</title>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Logoipsum - Invoice Factoring</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="logo">Logomatum</div>
+            <div class="logo">
+                <img src="logo.png" alt="Logomatum Logo">
+                <h1>Logoipsum</h1>
+            </div>
             <div class="nav-links">
                 <a href="#" class="nav-link">Products</a>
                 <a href="#" class="nav-link">Solutions</a>
                 <a href="#" class="nav-link">Help center</a>
                 <a href="#" class="nav-link">Get started</a>
+            </div>
+            <div class="nav-btn">
                 <button class="login-btn">Login</button>
-                <button class="signup-btn">Sign up free</button>
+                <button class="signup-btn">Request a Demo</button>
             </div>
         </nav>
     </header>
@@ -30,17 +39,7 @@
                         <p>Why wait? Get same day funding and a faster way to access cash flow.</p>
                         <button class="cta-btn">Get started</button>
                     </div>
-                  <div class="hero-slide active">
-                        <h1>Get instant cash flow with invoice factoring</h1>
-                        <p>Why wait? Get same day funding and a faster way to access cash flow.</p>
-                        <button class="cta-btn">Get started</button>
-                    </div>
-                  <div class="hero-slide active">
-                        <h1>Get instant cash flow with invoice factoring</h1>
-                        <p>Why wait? Get same day funding and a faster way to access cash flow.</p>
-                        <button class="cta-btn">Get started</button>
-                    </div>
-                    <!-- <div class="hero-slide">
+                    <div class="hero-slide">
                         <h1>Transform your invoices into immediate capital</h1>
                         <p>Access up to 90% of your invoice value within 24 hours.</p>
                         <button class="cta-btn">Learn more</button>
@@ -49,7 +48,7 @@
                         <h1>Flexible financing for growing businesses</h1>
                         <p>No long-term contracts. Pay only for what you use.</p>
                         <button class="cta-btn">Start now</button>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="hero-dots">
                     <span class="dot active"></span>
@@ -62,50 +61,28 @@
 
         <section class="features">
             <h2>Outsource payment collection</h2>
+            <p>Faster and flexible access to cash flow from one or all your invoices.</p>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="icon">🔄</div>
-                    <h3>Approve up to 97/100</h3>
-                    <p>We approve most businesses that apply for invoice factoring</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">✨</div>
-                    <h3>You choose invoices to get paid</h3>
-                    <p>Select which invoices you want to factor - no minimum</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">💰</div>
-                    <h3>Simple pricing</h3>
-                    <p>Weekly fee starting at 1% - no hidden charges</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">⚡</div>
-                    <h3>Quick and quick</h3>
-                    <p>Get approved in 24 hours and funded in 24 hours</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">🔄</div>
-                    <h3>Flexible</h3>
-                    <p>No long-term contracts or commitments required</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon">📈</div>
-                    <h3>Invest in your business</h3>
-                    <p>Use the funds to grow your business your way</p>
+                    <div class="icon"></div>
+                    <h3></h3>
+                    <p></p>
                 </div>
             </div>
         </section>
 
         <section class="task-manager">
-            <h1>Task Manager</h1>
-            <p class="subtitle">Your daily to do list</p>
-            <div class="task-container">
-                <div class="task-list" id="taskList">
-                    <!-- Tasks will be added here dynamically -->
-                </div>
-                <div class="task-input-container">
-                    <input type="text" id="taskInput" placeholder="Add new task" class="task-input">
-                    <button onclick="addTask()" class="add-task-btn">Add Task</button>
+            <div class="task-bg">
+                <h1>Task Manager</h1>
+                <p class="subtitle">Your daily to do list</p>
+                <div class="task-container">
+                    <div class="task-list" id="taskList">
+                        <!-- Tasks will be added here dynamically -->
+                    </div>
+                    <div class="task-input-container">
+                        <input type="text" id="taskInput" placeholder="Add new task" class="task-input">
+                        <button onclick="addTask()" class="add-task-btn">Add Task</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -113,10 +90,10 @@
         <section class="contact">
             <h2>Contact us</h2>
             <p>Ready to start? Send us a message and we'll get back to you</p>
-            <form id="contactForm" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Full name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your message" required></textarea>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Full name" required>
+                <input type="email" id="email" required>
+                <textarea placeholder="Your message" id="message" required></textarea>
                 <button type="submit">Send message</button>
             </form>
         </section>
@@ -125,7 +102,9 @@
     <footer>
         <div class="footer-main">
             <div class="footer-description">
-                <p>Curabitur consequat, purus a scelerisque sagittis, nulla metus tincidunt elit, vel venenatis nulla libero nec nulla. Suspendisse potenti. Aenean a justo vel sapien pellentesque tincidunt. Sed luctus, elit ac interdum convallis, ligula libero egestas orci, at auctor felis ligula nec odio.</p>
+                <p>Curabitur consequat, purus a scelerisque sagittis, nulla metus tincidunt elit, vel venenatis nulla
+                    libero nec nulla. Suspendisse potenti. Aenean a justo vel sapien pellentesque tincidunt. Sed luctus,
+                    elit ac interdum convallis, ligula libero egestas orci, at auctor felis ligula nec odio.</p>
                 <div class="social-links">
                     <a href="#" class="social-link linkedin">
                         <img src="https://api.iconify.design/mdi:linkedin.svg" alt="LinkedIn">
@@ -135,7 +114,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-links">
                 <div class="footer-column">
                     <h3>Products</h3>
@@ -145,13 +124,13 @@
                     <a href="#">Supplier finance</a>
                     <a href="#">Customer finance</a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Company</h3>
                     <a href="#">About us</a>
                     <a href="#">Contact us</a>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Resources</h3>
                     <a href="#">Frequently asked questions</a>
@@ -160,7 +139,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="footer-legal">
                 <a href="#">Privacy policy</a>
@@ -175,4 +154,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
