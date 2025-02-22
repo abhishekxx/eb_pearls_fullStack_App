@@ -12,6 +12,7 @@
     --hero-active-dot: #DF49FC;
     --completed-text: #9ca3af;
     --checkbox-cheked: #4532FC80;
+    --icon-color: linear-gradient(68.19deg, #4532FC 13.13%, #DF49FB 89%);
 }
 
 * {
@@ -478,21 +479,18 @@ footer {
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
+    /* color: var(--bg-color); */
+    
 }
 
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-}
-
-.social-link img {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: var(--footer-text);
+.social-links i {
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background: linear-gradient(68.19deg, #4532FC 13.13%, #DF49FB 89%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-links {
