@@ -544,6 +544,82 @@ footer {
     color: var(--footer-link);
 }
 
+/* Modal Styles */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--hero-active-dot);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.success-icon::after {
+    content: '✓';
+    color: white;
+    font-size: 2rem;
+}
+
+.modal h2 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.modal p {
+    color: var(--footer-text);
+    margin-bottom: 1.5rem;
+}
+
+.modal button {
+    background: var(--hero-active-dot);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .footer-main {
@@ -612,5 +688,10 @@ footer {
     .footer-extra {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .modal {
+        width: 95%;
+        margin: 1rem;
     }
 }

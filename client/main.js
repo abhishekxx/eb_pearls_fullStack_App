@@ -28,13 +28,11 @@ function nextSlide() {
 
 let slideInterval = setInterval(nextSlide, 5000);
 
-// Click handlers for dots
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentSlide = index;
         showSlide(currentSlide);
         
-        // Reset interval
         clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, 5000);
     });
@@ -218,6 +216,17 @@ document.addEventListener('DOMContentLoaded', fetchFeatures, fetchTasks);
 
 // Contact Form Handling
 
+function showModal() {
+    const modal = document.getElementById('successModal');
+    modal.classList.add('active');
+}
+
+function closeModal() {
+    const modal = document.getElementById('successModal');
+    modal.classList.remove('active');
+}
+
+
 async function handleSubmit(event) {
     event.preventDefault();
 
@@ -233,28 +242,37 @@ async function handleSubmit(event) {
     const formData = { name, email, message };
 
     try {
-        const response = await fetch(`${BASE_URL}/post-contact-message.php`, {
+        const response = await fetch('http://localhost/eb-pearls-test-server/post-contact-message.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),
         });
 
-        const result = await response.json();
-        console.log('Server Response:', result); 
+        const textResponse = await response.text(); 
+        console.log("RAW Response:", textResponse);
 
-        if (result.success) {
-            alert(result.success);
-            document.getElementById("contactForm").reset();
-        } else {
-            alert(result.error);
+        try {
+            const result = JSON.parse(textResponse); 
+            console.log('Server Response:', result);
+
+            if (result.success) {
+                // alert(result.success);
+                showModal();
+                document.getElementById("contactForm").reset();
+            } else {
+                alert(result.error);
+            }
+        } catch (parseError) {
+            console.error("JSON Parsing Error:", parseError);
+            alert("Server response is not valid JSON.");
         }
+
     } catch (error) {
         console.error('Error submitting form:', error);
         alert("An error occurred while sending the message.");
     }
 }
 
-// Attach event listener after DOM loads
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contactForm').addEventListener('submit', handleSubmit);
 });

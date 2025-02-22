@@ -1,5 +1,4 @@
 <?php
-// db_config.php: Include your database connection code here
 require_once 'db_config.php';
 
 header("Access-Control-Allow-Origin:  *");
