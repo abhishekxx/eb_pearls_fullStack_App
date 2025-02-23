@@ -2,6 +2,10 @@
 
 A modern landing page for Logoipsum - A Mini APP built with vanilla HTML, CSS, JavaScript and PHP. Features include a dynamic hero slider, task management system, and contact form.
 
+## For video Demo :
+
+     `https://drive.google.com/file/d/12o-akMcbgR6w8lnip4wBC0xmklBnx0Yj/view`
+
 ## Features
 
 - Responsive design that works on all devices
