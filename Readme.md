@@ -113,6 +113,8 @@ The project uses CSS variables for easy customization. Main colors can be modifi
 
 - Hero section content can be modified in `index.html`
 - Feature cards are loaded dynamically from the API
+- Task list is loaded dynamically from the API
+- Contact form content can be modified in `index.html`
 - Footer links and content can be updated in `index.html`
 
 ## Browser Support
@@ -130,7 +132,7 @@ A PHP-based REST API for managing features and contact form submissions with MyS
 
 ## Features
 
-- Feature Management (CRUD operations)
+- Feature Management
 - Contact Form with Email Integration
 - Task Management with Complete CRUD Operations
 - MySQL Database Integration
@@ -217,13 +219,17 @@ Please use file `eb_pearls_test_data_2025-02-22_194639.sql` to create the databa
 
 ## Email Configuration
 
-The application uses PHPMailer for sending emails. Update the SMTP configuration in `send_email.php`:
+The application uses PHPMailer for sending emails. Update the SMTP configuration in `post-contact-message.php`:
 
 ```php
 $mail->Host       = 'smtp.gmail.com';
 $mail->Username   = 'your_email@gmail.com';
 $mail->Password   = 'your_app_password';
 ```
+
+## Recipients Mails
+
+$mail->addAddress('johnchand941@gmail.com', 'Abhishek Chand'); // Add a recipient
 
 ## Security Notes
 
