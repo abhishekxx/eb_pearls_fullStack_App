@@ -4,7 +4,7 @@ A modern landing page for Logoipsum - A Mini APP built with vanilla HTML, CSS, J
 
 ## For video Demo :
 
-     `https://drive.google.com/file/d/12o-akMcbgR6w8lnip4wBC0xmklBnx0Yj/view`
+     https://drive.google.com/file/d/12o-akMcbgR6w8lnip4wBC0xmklBnx0Yj/view
 
 ## Features
 
